@@ -1,10 +1,10 @@
-console.log("Hello from JavaScript!");
+const character = document.querySelector(".character");
 
-// Change the greeting after the page loads
-document.addEventListener("DOMContentLoaded", () => {
-    const title = document.querySelector("h1");
+window.addEventListener("scroll", () => {
+  const scroll = window.scrollY;
 
-    title.addEventListener("click", () => {
-        title.textContent = "Clicked!";
-    });
+  // move character based on scroll
+  const x = scroll * 0.3;
+
+  character.style.transform = `translateX(${x}px)`;
 });
