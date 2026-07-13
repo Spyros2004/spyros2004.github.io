@@ -1,13 +1,32 @@
-body {
-    font-family: Arial, sans-serif;
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    margin: 0;
-    background: #111;
-    color: white;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-    font-size: 4rem;
+body {
+  height: 3000px; /* creates scrolling */
+  background: #111;
+  overflow-x: hidden;
+}
+
+.world {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.character {
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+
+  width: 80px;
+  height: 80px;
+
+  background: tomato;
+  border-radius: 50%;
+
+  transition: transform 0.05s linear;
 }
